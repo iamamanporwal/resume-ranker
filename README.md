@@ -3,7 +3,6 @@ The Resume Ranking and Extraction System is a web-based application designed to 
 
 Certainly! Here's a template for a GitHub README file for your project with added emojis:
 
-```markdown
 # Resume Analyzer Web App :memo::computer:
 
 ![GitHub](https://img.shields.io/github/license/your-username/resume-analyzer)
