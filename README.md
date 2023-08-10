@@ -5,8 +5,8 @@ Certainly! Here's a template for a GitHub README file for your project with adde
 
 # Resume Analyzer Web App :memo::computer:
 
-![GitHub](https://img.shields.io/github/license/your-username/resume-analyzer)
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/resume-analyzer)
+![GitHub](https://img.shields.io/github/license/iamamanporwal/resume-ranker)
+![GitHub last commit](https://img.shields.io/github/last-commit/iamamanporwal/resume-ranker)
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 
 An interactive web application that analyzes resumes based on a job description using natural language processing techniques.
