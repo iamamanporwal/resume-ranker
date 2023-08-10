@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Axis Bank Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <center>
+    <img src = "https://w7.pngwing.com/pngs/509/329/png-transparent-axis-bank-connaught-place-new-delhi-security-business-bank-purple-angle-violet-thumbnail.png" width="50" height="50" >
+    <img src = "https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png" width="50" height="50" >
+    <h1>Axis Bank Resume Analyzer</h1>
+    </center>
+    
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="job_description">Job Description:</label>
+        <textarea name="job_description" rows="4" cols="50" required></textarea>
+        <br>
+        <label for="resume_files">Upload Resumes (PDF):</label>
+        <input type="file" name="resume_files" accept=".pdf" multiple required>
+        <br>
+        <input type="submit" value="Analyze Resumes">
+    </form>
+    <br>
+    {% if results %}
+    <h2>Ranked Resumes:</h2>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Similarity in %</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ result[0][0] }}</td>
+            <td>{{ result[1][0] }}</td>
+            <td>{{ result[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% if results %}
+    <br>
+    <a href="{{ url_for('download_csv') }}" download="ranked_resumes.csv" class="download-link">
+        Download CSV
+    </a>
+    
+{% endif %}
+
+    {% endif %}
+</body>
+</html>
