@@ -1,7 +1,7 @@
 # Resume Ranker AI
 The Resume Ranking and Extraction System is a web-based application designed to streamline the process of evaluating and ranking job applicants' resumes based on their similarity to a provided job description. The system also extracts essential information, such as names and emails, from the resumes to facilitate efficient candidate identification.
 
-Certainly! Here's a template for a GitHub README file for your project with added emojis:
+https://www.youtube.com/watch?v=0eo_5oyW11o&t=1s
 
 # Resume Analyzer Web App :memo::computer:
 
@@ -23,7 +23,7 @@ An interactive web application that analyzes resumes based on a job description 
 
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/your-username/resume-analyzer.git](https://github.com/iamamanporwal/resume-ranker.git)
+   https://github.com/iamamanporwal/resume-ranker.git
    ```
 
 2. Navigate to the project directory:
