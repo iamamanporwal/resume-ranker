@@ -25,7 +25,7 @@ An interactive web application that analyzes resumes based on a job description 
    cd resume-analyzer
    ```
 
-3. Install dependencies:
+3. Install dependencies (Install the latest libraries instead of the specific ones mentioned in the txt file):
    ```sh
    pip install -r requirements.txt
    ```
