@@ -12,6 +12,7 @@ An interactive web application that analyzes resumes based on a job description 
 - Calculate the similarity between the job description and each resume.
 - Rank resumes based on similarity percentage.
 - Download the ranked resumes in a CSV file.
+- Dark Mode Contributed by @hbalickgoodman 
 
 ## :wrench: Setup and Usage
 
