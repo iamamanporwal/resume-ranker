@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Axis Bank Resume Analyzer</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" id="theme-style">
+    <style>
+        /* Define your dark theme styles here */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const themeStyleLink = document.getElementById('theme-style');
 
+            // Add an event listener for the 'transitionend' event
+            themeStyleLink.addEventListener('transitionend', () => {
+                // Update the theme link after the transition is complete
+                themeStyleLink.removeEventListener('transitionend', arguments.callee);
+                themeStyleLink.href = body.classList.contains('dark-mode')
+                    ? "{{ url_for('static', filename='styles.css') }}"
+                    : "{{ url_for('static', filename='dark-theme.css') }}";
+            });
+
+            // Toggle the dark mode class
+            body.classList.toggle('dark-mode');
+        }
+
+
+    </script>
 </head>
+
 <body>
     <center>
-    <img src = "https://w7.pngwing.com/pngs/509/329/png-transparent-axis-bank-connaught-place-new-delhi-security-business-bank-purple-angle-violet-thumbnail.png" width="50" height="50" >
-    <img src = "https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png" width="50" height="50" >
-    <h1>Axis Bank Resume Analyzer</h1>
+        <img src="https://w7.pngwing.com/pngs/509/329/png-transparent-axis-bank-connaught-place-new-delhi-security-business-bank-purple-angle-violet-thumbnail.png"
+            width="50" height="50">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png" width="50" height="50">
+        <h1>Axis Bank Resume Analyzer</h1>
     </center>
-    
+    <label id="dark-mode-toggle-label" for="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()">
+        <div id="dark-mode-toggle-slider"></div>
+    </label>
+
     <form action="/" method="post" enctype="multipart/form-data">
         <label for="job_description">Job Description:</label>
         <textarea name="job_description" rows="4" cols="50" required></textarea>
@@ -45,9 +78,10 @@
     <a href="{{ url_for('download_csv') }}" download="ranked_resumes.csv" class="download-link">
         Download CSV
     </a>
-    
-{% endif %}
+
+    {% endif %}
 
     {% endif %}
 </body>
+
 </html>

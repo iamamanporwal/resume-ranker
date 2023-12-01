@@ -1,7 +1,72 @@
 /* Reset some default styles */
-body, h1, h2, p, table, th, td {
+body,
+h1,
+h2,
+p,
+table,
+th,
+td {
     margin: 0;
     padding: 0;
+}
+
+
+
+/* Light mode styles */
+body:not(.dark-mode) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Dark mode toggle styles */
+#dark-mode-toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+#dark-mode-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+#dark-mode-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+#dark-mode-toggle:checked+#dark-mode-toggle-slider {
+    background-color: #2196F3;
+}
+
+#dark-mode-toggle:checked+#dark-mode-toggle-slider:before {
+    transform: translateX(26px);
+}
+
+body.dark-mode label {
+    color: #000000;
+    /* Label color for dark mode */
 }
 
 
@@ -11,6 +76,7 @@ body {
     background-color: #f2f2f2;
     color: #333;
     padding: 20px;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 h1 {
@@ -25,7 +91,10 @@ form {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-label, input[type="file"], textarea, input[type="submit"] {
+label,
+input[type="file"],
+textarea,
+input[type="submit"] {
     display: block;
     margin-bottom: 10px;
 }
@@ -58,7 +127,8 @@ table {
     margin-top: 20px;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
