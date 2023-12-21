@@ -52,9 +52,6 @@ An interactive web application that analyzes resumes based on a job description 
 └── .gitignore
 ```
 
-## :page_facing_up: License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## :memo: Contributing
 
