@@ -12,6 +12,9 @@ app = Flask(__name__)
 # Load spaCy NER model
 nlp = spacy.load("en_core_web_sm")
 
+# Initialize results variable
+results = []
+
 # Extract text from PDFs
 def extract_text_from_pdf(pdf_path):
     with open(pdf_path, "rb") as pdf_file:
