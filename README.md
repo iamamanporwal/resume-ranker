@@ -11,7 +11,7 @@ An interactive web application that analyzes resumes based on a job description 
 - Process resumes to extract names, emails, and text content.
 - Calculate the similarity between the job description and each resume.
 - Rank resumes based on similarity percentage.
-- Download the ranked resumes in a CSV file.
+- Download the ranked resumes in a CSV file. (Fixed by @atiumcache)
 - Dark Mode Contributed by @hbalickgoodman 
 
 ## :wrench: Setup and Usage
